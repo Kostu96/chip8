@@ -3,6 +3,9 @@
 
 using u8 = uint8_t;
 using u16 = uint16_t;
+using u32 = uint32_t;
+using s8 = int8_t;
+using f32 = float;
 
 class Chip8
 {
@@ -13,10 +16,10 @@ public:
 	void reset();
 	void clock();
 
+	const u8* getScreenMemory() const { return Screen; }
+
 	Chip8(const Chip8&) = delete;
 	Chip8& operator=(const Chip8&) = delete;
-	
-	u8 Screen[32][8];
 private:
 	union Instruction
 	{
@@ -30,6 +33,7 @@ private:
 		u16 word;
 	};
 
+	u8 Screen[256];
 	u16 Stack[16];
 	u16 I;
 	u16 PC : 12;
