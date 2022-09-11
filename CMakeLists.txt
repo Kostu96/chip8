@@ -12,7 +12,10 @@ set(CHIP8_SOURCES
     ${CMAKE_CURRENT_SOURCE_DIR}/CMakeLists.txt
     ${CMAKE_CURRENT_SOURCE_DIR}/chip8.cpp
     ${CMAKE_CURRENT_SOURCE_DIR}/chip8.hpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/disassembler.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/disassembler.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/main.cpp
+    ${CMAKE_CURRENT_SOURCE_DIR}/types.hpp
     ${CMAKE_CURRENT_SOURCE_DIR}/shader_sources.inl
 )
 
